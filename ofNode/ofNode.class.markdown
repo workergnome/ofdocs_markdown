@@ -1,0 +1,11 @@
+The ofNode is the base of all things 3d. It lets you represent a location, scale, and orientation in 3d space. Nodes are the base of the ofPrimitives, ofCamera, and ofEasyCamera, among other things. Nodes also allow you to link to other nodes as children or parents so that sets of nodes can move, rotate, and scale together. ofNode uses a right-handed cartesian coordinate system and "looks" along the -z axis.
+
+To get the current position, check out: getX(), getY(), getZ(). To get the x axis of the node call getXAxis() (or the y and z variants for those other axes).
+
+Another really useful feature of the ofNode is that you can get the [Eulerian angles](http://en.wikipedia.org/wiki/Euler_angles) of each node: getPitch(), getHeading(), getRoll().
+
+The global transformation matrix of the ofNode is also available using the getGlobalTransformMatrix(), which is very handy for figuring out things in relation to the OpenGL representation of your OF world.
+
+getGlobalOrientation() also is handy, returning a ofQuaternion that you can use to find out whether your node is upside down in relation to the rest of your OF world (really an OpenGL context, but let's not get into that quite yet).
+
+Parenting is handy for representing complex 3d models that are linked together, the same way that your hand is linked to your wrist (hopefully), which is linked to your elbow (hopefully), and so on. When you make a node a child to a parent node, the child's transformation matrix becomes relative to the parent node. In addition, any transformations the parent has are also applied to its children. So, if you set the rotation of the parent to 90 degrees on the x axis, the child node will also rotate 90 degrees but if you getXAxis() for the child it will still say 0 degrees because in its local transformation axis it has not rotated. Note that influence is descendant (parent → child/children), and not ascendant (child/children → parent). Of special note is that because transformations of a parent are applied to the child's transformation matrix, if you scale a parent by 2 and move the child 100 units in local coordinates, in global terms it will have moved 200 units.
