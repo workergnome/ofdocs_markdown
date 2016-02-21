@@ -50,7 +50,7 @@ def write_file(file_name)
     return if @content.empty?
 
     # puts "Creating #{file_name}"
-    File.open(file_name, "w") {|f| f.puts @content.join("\n")}
+    File.open(file_name, "w") {|f| f.puts @content.join("")}
   end
   @content = []
 end
