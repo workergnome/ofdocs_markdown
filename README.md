@@ -6,3 +6,4 @@ Questions:
 
 * How do we document the class itself?
 * how do we want to handle internal linking?
+  - there are two ways we're using.
