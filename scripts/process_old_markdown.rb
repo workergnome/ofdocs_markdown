@@ -1,10 +1,16 @@
+require 'fileutils'
+
 OF_DOC_DIRECTORY = '/Users/david/Documents/opensource/docsprint/ofSite/documentation'
-OF_MARKDOWN_FILE = 'types/ofColor_.markdown'
-TARGET_DIRECTORY = './ofColor'
-FILE_PREFIX = 'ofColor'
+OF_MARKDOWN_FILE = 'types/ofRectangle.markdown'
+TARGET_DIRECTORY = './ofRectangle'
+FILE_PREFIX = 'ofRectangle'
 FILE_EXTENSION = '.md'
 
-REGEX = /\s*?_syntax:\s+(\w+)\(/
+REGEX = /\s*?_name:\s+(\w+)_/
+
+
+
+FileUtils.mkdir_p TARGET_DIRECTORY
 
 in_description_block = false
 content_detected = false
@@ -61,7 +67,7 @@ completed_class_description = false
 
 File.foreach("#{OF_DOC_DIRECTORY}/#{OF_MARKDOWN_FILE}") do |line|
 
-  # Look for the class descriptiong
+  # Look for the class description
   if looking_for_class_description || !completed_class_description
     if line.include? "##Description" 
       looking_for_class_description = false

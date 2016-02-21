@@ -29,7 +29,7 @@ ofColor is templated, which means that it has several different ways it can be c
 
 You're probably familiar with RGB colors already, but HSB is a big part of ofColor. It uses a *hue* value (for the standard ofColor the range for this value is between 0 and 255) to determine what the hue (the 'color' in the sense of a color in the rainbow) will be:
 
-![HSB](../images/ofColor.hsb_example.png)
+![HSB](../types/hsb.png)
 
 Approximate hues for some common colors:
 
@@ -43,6 +43,6 @@ Approximate hues for some common colors:
 
 Once you've selected a hue, you can use the *saturation* and *brightness* values to further refine the color. The saturation determines how much of the hue versus white is present and brightness determines how much hue versus black is present:
 
-![SB](../images/ofColor.hsb-cone.jpg)
+![SB](../types/hsb-cone.jpg)
 
 In other words, saturation refers to the intensity of the color: high saturation means intense color, low saturation means washed out or black and white. Brightness refers to how light or dark the color is: high brightness means a bright color, low brightness means a dark color. If the brightness is 0 the resulting color will be black, regardless of the values of hue or saturation.

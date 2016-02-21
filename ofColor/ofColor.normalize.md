@@ -12,4 +12,4 @@ The following
 
 will create this:
 
-![ofNorm](../images/ofColor.normalize.example.png)
+![ofNorm](../types/ofNormalize.png)
