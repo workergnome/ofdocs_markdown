@@ -23,11 +23,15 @@ File.foreach("#{OF_DOC_DIRECTORY}/#{OF_MARKDOWN_FILE}") do |line|
     in_description_block = false
     next
   elsif (not in_description_block)
-    in_description_block = current_line.include?("_description:")
-  elsif (current_line.include? "<!----------------------------------------------------------------------------->")
+    in_description_block = /\s*?^_description/.match(line)
+  elsif (line.include? "<!----------------------------------------------------------------------------->")
     current_file.close
     current_file = nil
-  else
-    current_file.puts line
+    in_description_block = false
+  elsif (in_description_block)
+    text = line
+    text.gsub!('~~~~{.cpp}', '```cpp')
+    text.gsub!("~~~~","```")
+    current_file.puts line #unless line.strip == ""
   end
 end
