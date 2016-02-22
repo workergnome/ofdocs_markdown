@@ -1,0 +1,1 @@
+Removes an index.

@@ -1,0 +1,2 @@
+Add a normal to the mesh as a 3D vector, typically perpendicular to the plane of the face. A normal is a vector that defines how a surface responds to lighting, i.e. how it is lit. The amount of light reflected by a surface is proportional to the angle between the light's direction and the normal. The smaller the angle the brighter the surface will look. See the normalsExample for advice on computing the normals.
+addNormal adds the 3D vector to the end of the list, so you need to make sure you add normals at the same index of the matching face.

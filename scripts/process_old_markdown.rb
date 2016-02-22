@@ -1,10 +1,10 @@
 require 'fileutils'
 
+# Constants that drive what is processed
 OF_DOC_DIRECTORY = '/Users/david/Documents/opensource/docsprint/ofSite/documentation'
-OF_MARKDOWN_FILE = 'types/ofRectangle_functions.markdown'
-TARGET_DIRECTORY = './ofRectangle'
-FILE_PREFIX = 'ofRectangle'
-FILE_EXTENSION = '.md'
+OF_MARKDOWN_FILE = '3d/ofSpherePrimitive.markdown'
+TARGET_DIRECTORY = './3d'
+CLASS_NAME = 'ofSpherePrimitive'
 
 LOOKUP_TABLE = [
   ["<<",  "cpp_left_shift"],
@@ -47,18 +47,19 @@ LOOKUP_TABLE = [
   [",",   "cpp_sequencing"]
 ]
 
-REGEX = /\s*?_name:\s+(?:operator)(.+)_/
 
+# Magic Words
+CONTENT_NAME_REGEX = /\s*?_name:\s+(?:operator)?(.+)_/
+DESCRIPTION_REGEX = /\s*?^_description/
 COMMENT_LINE = "<!----------------------------------------------------------------------------->"
+DESCRIPTION =  "##Description"
+METHODS = "##Methods"
+FILE_EXTENSION = '.md'
 
 
+# Generate the directory structure
 FileUtils.mkdir_p TARGET_DIRECTORY
 
-in_description_block = false
-content_detected = false
-
-@current_file = nil
-@content = []
 
 def write_line(line)
   text = line
@@ -66,14 +67,15 @@ def write_line(line)
   text.gsub!("~~~~","```")
 
   if text.include? "!["
-    puts "Image found in #{@current_file}.\n...please fix #{text}\n"
+    puts "Image found in #{@current_content_block}.\n...please fix #{text}\n"
   end
 
   @content << text
 end
 
 def write_file(file_name)
-  unless File.exists? file_name
+  path = "#{TARGET_DIRECTORY}/#{file_name}#{FILE_EXTENSION}"
+  unless File.exists? path
     
     # clean up front
     found_content = false
@@ -99,70 +101,86 @@ def write_file(file_name)
 
 
 
-    # puts "Creating #{file_name}"
-    File.open(file_name, "w") {|f| f.puts @content.join("")}
+    puts "Creating #{file_name}"
+    File.open(path, "w") {|f| f.puts @content.join("")}
   end
   @content = []
 end
 
+# Set up variables
+@current_content_block = nil
+@content = []
 
+
+in_description_block = false
 looking_for_class_description = true
 completed_class_description = false
 
+
+# Iterate through each line
 File.foreach("#{OF_DOC_DIRECTORY}/#{OF_MARKDOWN_FILE}") do |line|
 
   # Look for the class description
-  if looking_for_class_description || !completed_class_description
-    if line.include? "##Description" 
+  if looking_for_class_description || (not completed_class_description)
+    
+    # if you find the description block, stop looking
+    if line.include? DESCRIPTION
       looking_for_class_description = false
-      @current_file = "Main Class"
+      @current_content_block = "Main Class"  # only set for debugging and image output
       next
-    elsif line.include?("##Methods") || line.include?(COMMENT_LINE)
+
+    #  If you find the end of the description block, move on
+    elsif line.include?(METHODS) || line.include?(COMMENT_LINE)
       completed_class_description = true
-      file_name = "#{TARGET_DIRECTORY}/#{FILE_PREFIX}#{FILE_EXTENSION}"
-      write_file(file_name)
-      @current_file = nil
+      write_file(CLASS_NAME)
+      @current_content_block = nil
       next
-    elsif looking_for_class_description == false && completed_class_description == false
+    # if you're in the middle of the description block, save the line.
+    elsif not looking_for_class_description and not completed_class_description
       write_line(line)
       next
+    # Otherwise, keep going.
     else
       next
     end
   end
 
-  # Keep going until a the beginning of a block is found
-  next unless (results = REGEX.match(line)) || @current_file
-  if (not @current_file)
-    function_name = results[1].to_s 
-    function_name = function_name[0...-1] if function_name[-1] == "_"
+  # ---- Getting this far means you've found the description block. ----
 
+  # Keep going until a the beginning of a block is found,
+  # or you're actively saving a 
+  next unless (results = CONTENT_NAME_REGEX.match(line)) || @current_content_block
+
+  # Congrats, you've found a new content block
+  if @current_content_block.nil?
+
+    # process the content name.
+    content_name = results[1].to_s 
+    content_name = content_name[0...-1] if content_name[-1] == "_"
     LOOKUP_TABLE.each do |operator|
-      function_name = operator[1] if function_name == operator[0]
+      content_name = operator[1] if content_name == operator[0]
     end
 
-    file_name = "#{TARGET_DIRECTORY}/#{FILE_PREFIX}.#{function_name}#{FILE_EXTENSION}"
-    @current_file = file_name
+    #puts content_name
+    file_name = "#{CLASS_NAME}.#{content_name}"
+    @current_content_block = file_name
     in_description_block = false
     next
 
+  # search for the description block
   elsif (not in_description_block)
-    in_description_block = /\s*?^_description/.match(line)
-    content_detected = false
+    in_description_block = DESCRIPTION_REGEX.match(line)
     next
 
-  elsif (line.include? "<!----------------------------------------------------------------------------->")
-    write_file(@current_file)
-    @current_file = nil
-
-    content_detected = false
+  # If you've found the end of the description block,
+  # save it to disk.
+  elsif (line.include? COMMENT_LINE)
+    write_file(@current_content_block)
+    @current_content_block = nil
     in_description_block = false
-  elsif (in_description_block && !content_detected)
-    next if line.strip.empty?
-    content_detected = true
-  end  
 
-  if (in_description_block)
+  # if you're in the content block, save the line
+  elsif (in_description_block)
     write_line(line)
   end
 end

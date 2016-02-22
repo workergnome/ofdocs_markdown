@@ -1,0 +1,1 @@
+Returns the color at the index in the colors vector.

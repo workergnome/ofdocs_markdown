@@ -1,0 +1,1 @@
+You have to call this before linking the program with geometry shaders to set the number of output vertices, For quads, this should be 4, for points 1. Triangle strips can use up to the maximum number. You can check the maximum number supported on your graphics cards with getGeometryMaxOutputCount()

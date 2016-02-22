@@ -23,6 +23,7 @@ Questions:
         ofLog() << "this works!";
     ```
 
+README.md files contain grouping-level descriptions?
 
 Descriptions of classes are `ofColor.markdown`
 Descriptions of methods are `ofColor.getRed.markdown`
