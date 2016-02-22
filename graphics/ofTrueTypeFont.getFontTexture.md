@@ -1,0 +1,1 @@
+Returns the texture (as a reference) that ofTrueTypeFont uses internally.  When you load in a font, it parses the ttf (or .otf) file and rasterizes it to a texture for fast drawing.  This gives you low level access to that texture.

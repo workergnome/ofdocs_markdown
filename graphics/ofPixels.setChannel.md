@@ -1,0 +1,1 @@
+This sets all the pixel data for a single channel, for instance, the Red pixel values, from an ofPixels object assumed to be a grayscale representation of the data that should go into that one channel.

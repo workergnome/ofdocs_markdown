@@ -1,0 +1,1 @@
+Allocates space for pixel data of the given width (w), height (h) and number of channels (channels). If an ofImageType or ofPixelFormat is passed in, it will allocate based on the required number of channels.

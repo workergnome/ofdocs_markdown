@@ -1,0 +1,1 @@
+Returns the number of characters this font represents.  If you allocate the font using different parameters, you can load in partial and full character sets, this helps you know how many characters it can represent.

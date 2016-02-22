@@ -1,0 +1,1 @@
+Specifies a single point of a shape. The difference from ofVertex is that the line describing the edge of the shape between two points will be a curve as opposed to a straight line. The curve is automatically generated using the catmull from formula. To be called between ofBeginShape() and ofEndShape().

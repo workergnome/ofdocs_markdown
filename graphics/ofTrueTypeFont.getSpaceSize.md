@@ -1,0 +1,1 @@
+This is a variable to represent how wide spaces are sized.   It's a scalar for the width of the letter 'p', so 1.0 means that a space will be the size of the lower case 'p' of that font.  2.0 means that it's 2 times the size of the lower case 'p', etc.

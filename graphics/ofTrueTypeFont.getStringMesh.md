@@ -1,0 +1,1 @@
+Returns the string as an ofMesh.   Note: this is a mesh that contains vertices and texture coordinates for the textured font, not the points of the font that are returned via any of the get points functions.

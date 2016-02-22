@@ -1,0 +1,1 @@
+Returns the letter spacing of the font object.  You can control this by the ofTrueTypeFont::setLetterSpacing() function.  1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing.
