@@ -1,0 +1,1 @@
+Some video grabbers allow you to adjust the pixel format, which might help for optimization. At the moment, this seems to only apply to the Linux video grabber (GST). For all other grabbers, the only format accepted is OF_PIXELS_RGB.

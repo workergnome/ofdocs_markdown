@@ -1,0 +1,1 @@
+Initializes the video grabber. This function doesn't really do any real allocation, which happens in ofVideoGrabber::initGrabber(). In openframeworks we typically use empty constructors so that objects can be defined in h files, ie, you don't need to do dynamic allocation or use pointers as much in your code.

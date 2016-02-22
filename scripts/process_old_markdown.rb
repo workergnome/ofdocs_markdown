@@ -2,9 +2,9 @@ require 'fileutils'
 
 # Constants that drive what is processed
 OF_DOC_DIRECTORY = '/Users/david/Documents/opensource/docsprint/ofSite/documentation'
-OF_MARKDOWN_FILE = 'math/ofVec4f.markdown'
-TARGET_DIRECTORY = './math'
-CLASS_NAME = 'ofVec4f'
+OF_MARKDOWN_FILE = 'video/ofVideoSavedEventArgs.markdown'
+TARGET_DIRECTORY = './video'
+CLASS_NAME = 'ofVideoSavedEventArgs'
 
 LOOKUP_TABLE = [
   ["<<",  "cpp_left_shift"],
@@ -61,6 +61,7 @@ FILE_EXTENSION = '.md'
 FileUtils.mkdir_p TARGET_DIRECTORY
 
 
+# function to add a line to the buffer to be written.
 def write_line(line)
   text = line
   text.gsub!('~~~~{.cpp}', '```cpp')
@@ -73,6 +74,7 @@ def write_line(line)
   @content << text
 end
 
+# function to write a file to disk
 def write_file(file_name)
   path = "#{TARGET_DIRECTORY}/#{file_name}#{FILE_EXTENSION}"
   unless File.exists? path
@@ -99,19 +101,17 @@ def write_file(file_name)
 
     return if @content.empty?
 
-
-
     puts "Creating #{file_name}"
     File.open(path, "w") {|f| f.puts @content.join("")}
   end
   @content = []
 end
 
+
+
 # Set up variables
 @current_content_block = nil
 @content = []
-
-
 in_description_block = false
 looking_for_class_description = true
 completed_class_description = false

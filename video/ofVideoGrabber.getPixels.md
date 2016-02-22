@@ -1,0 +1,1 @@
+Returns the pointer to the array of pixels that represents the current frame of live video. the data is stored interleaved as RGB, and in an array which is the size: width*height*3. This function returns a pointer to an unsigned char array -- it's up to the user to deal with this memory correctly. Functions like getWidth() and getHeight() can help.

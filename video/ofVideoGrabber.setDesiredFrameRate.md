@@ -1,0 +1,1 @@
+Set's the desired frame rate of the grabber. This should be called before initGrabber(), which will try to initialize at the desired frame rate. Not all frame rates will be supported, but this at least gives you some abilitity to try grab at different rates.

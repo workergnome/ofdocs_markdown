@@ -1,0 +1,1 @@
+Choose to capture from a specific capture device specified by _deviceID. Use listDevices() to see a list of available capture devices and their device IDs. This should be called before initGrabber(), which will use this info to choose the device you want.
