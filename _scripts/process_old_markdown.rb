@@ -30,6 +30,7 @@ LOOKUP_TABLE = [
   ["^=",  "cpp_bitwise_xor_assignment"],
   ["|=",  "cpp_bitwise_or_assignment"],
   ["?:",  "cpp_conditional_assignment"],
+  ["%=",  "cpp_modulo_assignment"],
   ["==",  "cpp_equality"],
   ["!=",  "cpp_not_equality"],
   ["*",   "cpp_multiplication"],
