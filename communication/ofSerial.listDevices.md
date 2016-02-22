@@ -1,0 +1,1 @@
+This lists out all the available serial devices to the console or standard output. On OSX and Linux this will return all the devices listed in /dev tty and cu, so you might want to compare it against a list of devices that you're expecting if you want to use it to dynamically connect to a device.
