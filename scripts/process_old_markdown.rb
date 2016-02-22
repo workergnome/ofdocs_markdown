@@ -2,9 +2,9 @@ require 'fileutils'
 
 # Constants that drive what is processed
 OF_DOC_DIRECTORY = '/Users/david/Documents/opensource/docsprint/ofSite/documentation'
-OF_MARKDOWN_FILE = 'events/ofTouchEventArgs.markdown'
-TARGET_DIRECTORY = './events'
-CLASS_NAME = 'ofTouchEventArgs'
+OF_MARKDOWN_FILE = 'math/ofVec4f.markdown'
+TARGET_DIRECTORY = './math'
+CLASS_NAME = 'ofVec4f'
 
 LOOKUP_TABLE = [
   ["<<",  "cpp_left_shift"],
