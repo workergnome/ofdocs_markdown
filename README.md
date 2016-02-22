@@ -56,6 +56,7 @@ LOOKUP_TABLE = [
   ["/=",  "cpp_division_assignment"],
   ["+=",  "cpp_additive_assignment"],
   ["-=",  "cpp_subtractive_assignment"],
+  ["%=",  "cpp_modulo_assignment"],
   [">>=", "cpp_right_shift_assignment"],
   ["<<=", "cpp_left_shift_assignment"],
   ["&=",  "cpp_bitwise_and_assignment"],
@@ -75,7 +76,7 @@ LOOKUP_TABLE = [
   [">",   "cpp_greater_than"],
   ["<",   "cpp_less_than"],
   ["<=",  "cpp_less_or_equal_than"],
-  ["<=",  "cpp_greater_or_equal_than"],
+  [">=",  "cpp_greater_or_equal_than"],
   [",",   "cpp_sequencing"]
 ]
 ```
