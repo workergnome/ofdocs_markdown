@@ -1,0 +1,1 @@
+This function gets called when the mouse is moving and the button is down. The button variable can be used to test against left or right button drags. You also receive the x and y coordinates of the mouse.

@@ -1,0 +1,1 @@
+This returns the current frame as an int, counting up to (depending on your system) 2147483647 before rolling over back to 0. Don't worry though, at 60 frames a second you have 68 years until it rolls over though.

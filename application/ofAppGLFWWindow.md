@@ -1,0 +1,1 @@
+This is the base class for the [GLFW](https://github.com/glfw) renderer that you can optionally use with openFrameworks. We've moved away from GLUT and towards GLFW for our windowing system. You probably won't deal with this a great deal (hopefully).

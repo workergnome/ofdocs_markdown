@@ -2,9 +2,9 @@ require 'fileutils'
 
 # Constants that drive what is processed
 OF_DOC_DIRECTORY = '/Users/david/Documents/opensource/docsprint/ofSite/documentation'
-OF_MARKDOWN_FILE = '3d/ofSpherePrimitive.markdown'
-TARGET_DIRECTORY = './3d'
-CLASS_NAME = 'ofSpherePrimitive'
+OF_MARKDOWN_FILE = 'application/ofWindowSettings.markdown'
+TARGET_DIRECTORY = './application'
+CLASS_NAME = 'ofWindowSettings'
 
 LOOKUP_TABLE = [
   ["<<",  "cpp_left_shift"],
@@ -162,7 +162,11 @@ File.foreach("#{OF_DOC_DIRECTORY}/#{OF_MARKDOWN_FILE}") do |line|
     end
 
     #puts content_name
-    file_name = "#{CLASS_NAME}.#{content_name}"
+    if CLASS_NAME.empty?
+      file_name = content_name
+    else
+      file_name = "#{CLASS_NAME}.#{content_name}"
+    end
     @current_content_block = file_name
     in_description_block = false
     next

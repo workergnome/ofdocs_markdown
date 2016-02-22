@@ -1,0 +1,1 @@
+This returns whether your current device does hardware orientation. An iPhone, for instance, does hardware orientation, which you might notice when you tilt your iPhone to the side, hence ofDoesHWOrientation() would return true. Tilting your laptop to the side does not do the same thing, hence ofDoesHWOrientation() would return false.

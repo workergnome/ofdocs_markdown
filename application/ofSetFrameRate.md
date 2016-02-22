@@ -1,0 +1,1 @@
+Attempts to set the frame rate to a given target by sleeping a certain amount per frame. The results of this may vary based if vertical sync is enabled or disabled (either at the card level or via code), because this locks the drawing to intervals where the screen refreshes.

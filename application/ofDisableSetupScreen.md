@@ -1,0 +1,1 @@
+Every update/draw cycle, the function ofSetupScreen is called. That function sets the perspective, coordinate system, and some other openGL parameters. If you need to use your own parameters, the call to that function can be disabled with ofDisableSetupScreen.
