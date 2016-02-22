@@ -2,9 +2,9 @@ require 'fileutils'
 
 # Constants that drive what is processed
 OF_DOC_DIRECTORY = '/Users/david/Documents/opensource/docsprint/ofSite/documentation'
-OF_MARKDOWN_FILE = 'types/ofStyle.markdown'
-TARGET_DIRECTORY = './types'
-CLASS_NAME = 'ofStyle'
+OF_MARKDOWN_FILE = 'addons/ofxXmlSettings/ofxXmlSettings.markdown'
+TARGET_DIRECTORY = './addons'
+CLASS_NAME = 'ofxXmlSettings'
 
 LOOKUP_TABLE = [
   ["<<",  "cpp_left_shift"],

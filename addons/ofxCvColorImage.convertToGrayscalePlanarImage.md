@@ -1,0 +1,1 @@
+Copies the pixels of the ofxCvColorImage into an ofxCvGrayscale image. You can optionally specify whether you want to use the R G or B channel of the ofxCvColorImage to set the values of the ofxCvGrayscale.

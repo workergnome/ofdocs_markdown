@@ -1,0 +1,1 @@
+This increases the contrast of the image remapping the brightest points in the image to white and the darkest points in the image to black. Generally on a ofxCvGrayscaleImage it isn't particularly noticeable, though it can have a large effect mathematically.

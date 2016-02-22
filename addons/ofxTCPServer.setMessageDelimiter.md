@@ -1,0 +1,1 @@
+This sets the message delimiter that your server will use when sending and receiving messages from clients. By default it's [\TCP] though you can have it be any value as long as it's consistent on both the client and server sides.

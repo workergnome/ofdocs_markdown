@@ -1,0 +1,1 @@
+Gets the current smoothed accelerometer data (value in number of g's (1g = gravity, 9.8m/s^2). The smoothing prevents sudden spikes but can potentially make detecting gestures or other sudden moments difficult.

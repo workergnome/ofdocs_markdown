@@ -1,0 +1,1 @@
+Sets whether the image is using a texture or not. If the image is not using a texture then calls to getTextureReference() will return null and the image cannot be drawn. This is handy if you know that you won't be displaying the image to the screen.

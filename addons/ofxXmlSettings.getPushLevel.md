@@ -1,0 +1,1 @@
+getPushLevel returns the number of tags that have been pushed. Starting at 0 when the file is first populated (eg a call to loadFile). Each time pushTag is called push level increases by one. Each time popTag is called it decreases.

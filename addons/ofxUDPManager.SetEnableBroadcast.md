@@ -1,0 +1,1 @@
+Broadcast allows sending of packets to a particular network layer. If you're only using a single local network without a large number of attached machines, using broadcast may make more sense than trying to use multicast.

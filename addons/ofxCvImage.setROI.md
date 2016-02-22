@@ -1,0 +1,1 @@
+Sets the region of interest on the image.  Region of Interest is a rectangular area in an image, to segment object for further processing. Once the ROI is defined, OpenCV functions will operate on the ROI, reducing the number of pixels that the operation will examine.

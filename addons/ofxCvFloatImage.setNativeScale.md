@@ -1,0 +1,1 @@
+Allows you to set the native scale of your images, for instance, if your images contain values ranging from 0.0 to 255.0 (unlikely, but possible) then you would want to set them to ensure that all image operations complete correctly.

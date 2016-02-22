@@ -1,0 +1,1 @@
+The function cvUnDistortOnce corrects camera lens distortion for the image. It requires that you have an estimate of the camera distortion from a call to cvCalibrateCamera() or other calibration method.
