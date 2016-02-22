@@ -2,9 +2,9 @@ require 'fileutils'
 
 # Constants that drive what is processed
 OF_DOC_DIRECTORY = '/Users/david/Documents/opensource/docsprint/ofSite/documentation'
-OF_MARKDOWN_FILE = 'sound/ofxiPhoneSoundStream.markdown'
-TARGET_DIRECTORY = './sound'
-CLASS_NAME = 'ofxiPhoneSoundStream'
+OF_MARKDOWN_FILE = 'types/ofStyle.markdown'
+TARGET_DIRECTORY = './types'
+CLASS_NAME = 'ofStyle'
 
 LOOKUP_TABLE = [
   ["<<",  "cpp_left_shift"],
