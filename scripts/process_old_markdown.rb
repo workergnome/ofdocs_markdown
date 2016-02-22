@@ -1,13 +1,55 @@
 require 'fileutils'
 
 OF_DOC_DIRECTORY = '/Users/david/Documents/opensource/docsprint/ofSite/documentation'
-OF_MARKDOWN_FILE = 'types/ofRectangle.markdown'
+OF_MARKDOWN_FILE = 'types/ofRectangle_functions.markdown'
 TARGET_DIRECTORY = './ofRectangle'
 FILE_PREFIX = 'ofRectangle'
 FILE_EXTENSION = '.md'
 
-REGEX = /\s*?_name:\s+(\w+)_/
+LOOKUP_TABLE = [
+  ["<<",  "cpp_left_shift"],
+  [">>",  "cpp_right_shift"],
+  ["&&",  "cpp_logical_and"],
+  ["||",  "cpp_logical_or"],
+  ["[]",  "cpp_subscript"],
+  ["()",  "cpp_functional_form"],
+  ["++",  "cpp_postfix_increment"],
+  ["--",  "cpp_postfix_decrement"],
+  ["->",  "cpp_member_access"],
+  ["&",   "cpp_bitwise_and"], 
+  ["^",   "cpp_bitwise_xor"],
+  ["|",   "cpp_bitwise_or"], 
+  ["=",   "cpp_assignment"],
+  ["*=",  "cpp_multiplicative_assignment"],
+  ["/=",  "cpp_division_assignment"],
+  ["+=",  "cpp_additive_assignment"],
+  ["-=",  "cpp_subtractive_assignment"],
+  [">>=", "cpp_right_shift_assignment"],
+  ["<<=", "cpp_left_shift_assignment"],
+  ["&=",  "cpp_bitwise_and_assignment"],
+  ["^=",  "cpp_bitwise_xor_assignment"],
+  ["|=",  "cpp_bitwise_or_assignment"],
+  ["?:",  "cpp_conditional_assignment"],
+  ["==",  "cpp_equality"],
+  ["!=",  "cpp_not_equality"],
+  ["*",   "cpp_multiplication"],
+  ["+",   "cpp_addition"],
+  ["-",   "cpp_subtraction"],
+  ["/",   "cpp_division"],
+  ["~",   "cpp_bitwise_not"],
+  ["!",   "cpp_logical_not"],
+  [".",   "cpp_member_access"],
+  ["%",   "cpp_modulo"],
+  [">",   "cpp_greater_than"],
+  ["<",   "cpp_less_than"],
+  ["<=",  "cpp_less_or_equal_than"],
+  ["<=",  "cpp_greater_or_equal_than"],
+  [",",   "cpp_sequencing"]
+]
 
+REGEX = /\s*?_name:\s+(?:operator)(.+)_/
+
+COMMENT_LINE = "<!----------------------------------------------------------------------------->"
 
 
 FileUtils.mkdir_p TARGET_DIRECTORY
@@ -55,6 +97,8 @@ def write_file(file_name)
 
     return if @content.empty?
 
+
+
     # puts "Creating #{file_name}"
     File.open(file_name, "w") {|f| f.puts @content.join("")}
   end
@@ -72,24 +116,30 @@ File.foreach("#{OF_DOC_DIRECTORY}/#{OF_MARKDOWN_FILE}") do |line|
     if line.include? "##Description" 
       looking_for_class_description = false
       @current_file = "Main Class"
-    elsif line.include? "##Methods"
+      next
+    elsif line.include?("##Methods") || line.include?(COMMENT_LINE)
       completed_class_description = true
       file_name = "#{TARGET_DIRECTORY}/#{FILE_PREFIX}#{FILE_EXTENSION}"
       write_file(file_name)
       @current_file = nil
+      next
     elsif looking_for_class_description == false && completed_class_description == false
       write_line(line)
+      next
     else
       next
     end
   end
 
   # Keep going until a the beginning of a block is found
-  next unless results = REGEX.match(line) || @current_file
-
+  next unless (results = REGEX.match(line)) || @current_file
   if (not @current_file)
     function_name = results[1].to_s 
     function_name = function_name[0...-1] if function_name[-1] == "_"
+
+    LOOKUP_TABLE.each do |operator|
+      function_name = operator[1] if function_name == operator[0]
+    end
 
     file_name = "#{TARGET_DIRECTORY}/#{FILE_PREFIX}.#{function_name}#{FILE_EXTENSION}"
     @current_file = file_name
