@@ -2,4 +2,4 @@ ofxCvBlob represents an area identified by the OpenCV plug-in as being a contigu
 
 In the image below you can see two blobs detected in the grayscale image:
 
-![](../images/ofxCvBlob.example.png)
+![](ofxCvBlob.example.png)

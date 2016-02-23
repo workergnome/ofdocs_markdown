@@ -6,7 +6,7 @@ OF_POLY_WINDING_POSITIVE
 OF_POLY_WINDING_NEGATIVE
 OF_POLY_WINDING_ABS_GEQ_TWO
 
-![ofPath winding modes](../images/ofPath.setPolyWindingMode.example.gif)
+![ofPath winding modes](ofPath.setPolyWindingMode.example.gif)
 
 So adding the following points:
 
@@ -71,4 +71,4 @@ void ofApp::keyPressed(int key){
 
 we can see non zero and positive handle the winding differently:
 
-![ofPath winding](../images/ofPath.setPolyWindingMode.path_winding.png)
+![ofPath winding](ofPath.setPolyWindingMode.path_winding.png)

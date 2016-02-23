@@ -2,4 +2,4 @@ ofTessellator exists for one purpose: to turn ofPolylines into ofMeshes so that 
 
 The fairly simple shape shown on the left needs to be broken into triangles to be displayed, an example of how this might be done is shown on the right.
 
-![tessellation](../images/ofTessellator.example.png)
+![tessellation](ofTessellator.example.png)

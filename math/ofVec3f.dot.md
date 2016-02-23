@@ -2,7 +2,7 @@ Calculate and return the dot product of this vector with 'vec'.
 
 *Dot product* (less commonly known as *Euclidean inner product*) expresses the angular relationship between two vectors. In other words it is a measure of how *parallel* two vectors are. If they are completely perpendicular the dot product is 0; if they are completely parallel their dot product is either 1 if they are pointing in the same direction, or -1 if they are pointing in opposite directions.
 
-![DOT](../images/ofVec3f.dot.dotproduct.png)
+![DOT](ofVec3f.dot.dotproduct.png)
 Image courtesy of Wikipedia
 
 ```cpp

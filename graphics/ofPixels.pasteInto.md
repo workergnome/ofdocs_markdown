@@ -8,4 +8,4 @@ footballPixels.pasteInto(fujiPixels, 150, 100); // now fujiPixels is altered
 mixtureTex.loadData(fujiPixels);
 ```
 Drawing the three textures here you can see the ball cropped into the mountain:
-![crop_demo](../images/ofPixels.pasteInto.example.png)
+![crop_demo](ofPixels.pasteInto.example.png)

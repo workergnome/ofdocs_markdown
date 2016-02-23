@@ -1,6 +1,6 @@
 This sets the normal data for the VBO from a pointer to an array of ofVec3f instances. The normals are calculated as the vector perpendicular to a face. The mathematical definition of a normal is shown on the left, while the way that a normal is calculated for a triangle is shown on the right.
 
-![vbo normals](../images/ofVbo.setNormalData.vboNormals.png)
+![vbo normals](ofVbo.setNormalData.vboNormals.png)
 
 One technique for calculating normals is something like the following:
 

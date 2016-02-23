@@ -1,6 +1,6 @@
 Return the **normalized** ofVec2f that is perpendicular to this vector (ie rotated 90 degrees and normalized).
 
-![PERPENDICULAR](../images/ofVec2f.perpendicular.getPerpendicular.png)
+![PERPENDICULAR](ofVec2f.perpendicular.getPerpendicular.png)
 Image courtesy of Wikipedia
 
 ```cpp

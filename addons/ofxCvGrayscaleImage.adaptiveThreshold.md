@@ -5,4 +5,4 @@ left.adaptiveThreshold(20);
 right.adaptiveThreshold(50);
 ```
 
-![Thresholding an image](../images/ofxCvGrayscaleImage.adaptiveThreshold.example.png)
+![Thresholding an image](ofxCvGrayscaleImage.adaptiveThreshold.example.png)

@@ -4,4 +4,4 @@ ofMesh mesh;
 mesh = ofMesh::box(200.0, 200.0, 200.0);
 ```
 
-![image of a simple box](../images/ofMesh.box.example.jpg)
+![image of a simple box](ofMesh.box.example.jpg)

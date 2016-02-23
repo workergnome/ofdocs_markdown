@@ -1,6 +1,6 @@
 The contour finder allows you to detect objects in a scene by looking at contrast between adjoining pixels. For instance, in the image below, the hand is visible and trackable because the contrast between the wall behind it and the arm is quite distinct:
 
-![](../images/ofxCvContourFinder.example.png)
+![](ofxCvContourFinder.example.png)
 
 You can make contour detection more robust by comparing the current image to a background image and subtracting the background from the current image. This enables you to examine the incoming image without the background image data, reducing the amount of data that needs to be inspected.
 

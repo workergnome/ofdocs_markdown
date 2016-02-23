@@ -5,5 +5,5 @@ line.bezierTo(100, 100, 800, 100, 700, 400);
 ```
 Creates this:
 
-![polyline bezier](../images/ofPath.bezierTo.example.png)
+![polyline bezier](ofPath.bezierTo.example.png)
 The control points are shown in yellow.

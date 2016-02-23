@@ -6,4 +6,4 @@ second.convertToRange(100, 140); // super low contrast
 
 ```
 
-![Converting the range of an image](../images/ofxCvFloatImage.convertToRange.convertToRangeColor.png)
+![Converting the range of an image](ofxCvFloatImage.convertToRange.convertToRangeColor.png)

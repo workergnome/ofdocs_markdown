@@ -1,0 +1,336 @@
+Searching 1369 files for "ofNormalize"
+
+0 matches
+
+Searching 1369 files for "../images/"
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/3d/ofCamera.md:
+    1  ofCamera provides a camera onto a 3D scene. Some of the different properties of the camera are shown in the picture below:
+    2: ![FOV](../images/ofCamera.fov.png)
+    3  The far and near clip planes are the boundaries of what's visible in the camera. If you need more information on these, check http://www.falloutsoftware.com/tutorials/gl/gl0.htm
+    4  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/3d/ofMesh.addIndex.md:
+   16  
+   17  Will give you this shape:
+   18: ![image of basic use of indices](../images/ofMesh.addIndex.index.jpg)
+   19  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/3d/ofMesh.box.md:
+    5  ```
+    6  
+    7: ![image of a simple box](../images/ofMesh.box.example.jpg)
+    8  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/3d/ofMesh.md:
+   11  
+   12  You've probably seen a version of the following image somewhere before.
+   13: ![PRIMATIVES](../images/ofMesh.primitives.gif)
+   14  Generally you have to create your points to fit the drawing mode that you've selected because of whats called winding. A vertex gets connected to another vertex in the order that the mode does its winding and this means that you might need multiple vertices in a given location to create the shape you want. The cube, for example, requires eighteen vertices, not the eight that you would expect. If you note the order of vertices in the GL chart above you'll see that all of them use their vertices slightly differently (in particular you should make note of the GL_TRIANGLE_STRIP example). Drawing a shape requires that you keep track of which drawing mode is being used and which order your vertices are declared in.
+   15  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxAccelerometer.getOrientation.md:
+    1  Gets current orientation in degrees as an ofPoint (x: pitch, y: roll, z: not used).
+    2  
+    3: ![yaw-pitch](../images/ofxAccelerometer.getOrientation.yaw_axis_corrected.png)
+    4  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvBlob.md:
+    3  In the image below you can see two blobs detected in the grayscale image:
+    4  
+    5: ![](../images/ofxCvBlob.example.png)
+    6  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvColorImage.convertRgbToHsv.md:
+    1  Converts the image from values in the Red Green and Blue color space to values in the Hue Saturation and Value color space (sometimes called Hue Saturation Brightness)
+    2  
+    3: ![HSV](../images/ofxCvColorImage.convertRgbToHsv.hsb-cone.jpg "HSB")
+    4  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvColorImage.convertToRange.md:
+   11  ```
+   12  
+   13: !["Converting the range of an image"](../images/ofxCvColorImage.convertToRange.convertToRange.png)
+   14  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvContourFinder.md:
+    1  The contour finder allows you to detect objects in a scene by looking at contrast between adjoining pixels. For instance, in the image below, the hand is visible and trackable because the contrast between the wall behind it and the arm is quite distinct:
+    2  
+    3: ![](../images/ofxCvContourFinder.example.png)
+    4  
+    5  You can make contour detection more robust by comparing the current image to a background image and subtracting the background from the current image. This enables you to examine the incoming image without the background image data, reducing the amount of data that needs to be inspected.
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvFloatImage.convertToRange.md:
+    7  ```
+    8  
+    9: ![Converting the range of an image](../images/ofxCvFloatImage.convertToRange.convertToRangeColor.png)
+   10  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvGrayscaleImage.absDiff.md:
+    7  The below image shows how the diff process operates:
+    8  
+    9: ![Diffing two images](../images/ofxCvGrayscaleImage.absDiff.example.png)
+   10  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvGrayscaleImage.adaptiveThreshold.md:
+    6  ```
+    7  
+    8: ![Thresholding an image](../images/ofxCvGrayscaleImage.adaptiveThreshold.example.png)
+    9  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvGrayscaleImage.convertToRange.md:
+   11  ```
+   12  
+   13: ![Converting the range of an image](../images/ofxCvGrayscaleImage.convertToRange.example.png)
+   14  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvGrayscaleImage.threshold.md:
+    5  ```
+    6  
+    7: ![Thresholding an image](../images/ofxCvGrayscaleImage.threshold.example.png)
+    8  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvHaarFinder.draw.md:
+    1  Draws any detected objects to the screen with a rectangle, like so:
+    2  
+    3: ![Detecting faces](../images/ofxCvHaarFinder.draw.example.jpg)
+    4  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvHaarFinder.md:
+    1  ofxCvHaarFinder allows you to check an image for a match to a Haar classifier. The Haar Classifier is a data file generated from a training process where an application is "taught" how to recognize something in different contexts. This can be things like recognizing whether a certain sound is a word being spoken by a user, whether a gesture is a certain shape, or, in the image shown below, whether a pattern of pixels constitute a face.
+    2  
+    3: ![Face detection on a photograph](../images/ofxCvHaarFinder.face_detection.jpg)
+    4  
+    5  A very basic set-up of an application using ofxCvHaarFinder would look like so:
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvImage.blur.md:
+    1  Blurs the image
+    2  
+    3: ![Blurring an image original on Left](../images/ofxCvImage.blur.example.png)
+    4  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvImage.convertToRange.md:
+   11  ```
+   12  
+   13: ![Converting the range of an image](../images/ofxCvImage.convertToRange.example.png)
+   14  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvImage.cpp_bitwise_and_assignment.md:
+   11  ```
+   12  
+   13: ![Using the &= operation](../images/ofxCvImage.cpp_bitwise_and_assignment.example.png )
+   14  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvImage.dilate.md:
+    1: ![Dilating an image, original on Left](../images/ofxCvImage.dilate.example.png)
+    2  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvImage.erode.md:
+    1  Erodes the image.
+    2  
+    3: ![Eroding an image, original on Left](../images/ofxCvImage.erode.example.png)
+    4  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvImage.invert.md:
+    1  Flip the pixel values of the image.
+    2  
+    3: ![Inverting an image] (../images/ofxCvImage.invert.example.png "Original on Left")
+    4  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvImage.warpIntoMe.md:
+   18  ```
+   19  
+   20: ![Four corners for warping](../images/ofxCvImage.warpIntoMe.example.png)
+   21  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvImage.warpPerspective.md:
+    1  This warps the image perspective to the four points passed in:
+    2  
+    3: ![Four corners for warping](../images/ofxCvImage.warpPerspective.example.png)
+    4  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/addons/ofxCvShortImage.convertToRange.md:
+   11  ```
+   12  
+   13: ![Converting the range of an image](../images/ofxCvShortImage.convertToRange.example.png)
+   14  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/gl/ofLight.md:
+    9  **Ambient light** : Light from a fixed intensity and fixed source that affects all objects equally
+   10  
+   11: ![PointSpot](../images/ofLight.Lights_PointSpot.jpg)
+   12: ![AmbientDirectional](../images/ofLight.Lights_AmbientDirectional.jpg)
+   13  
+   14  Within ofLight, the following properties of each light type can be set individually:
+   ..
+   24  Additionally, spot lights have variable control of cone length and diameter.
+   25  
+   26: ![spotLight_yellowDiffuse_narrowCone](../images/ofLight.spotLight_yellowDiffuse_narrowCone.png)
+   27  
+   28  *Spotlight with yellow diffuse reflection, narrow cone*
+   29  
+   30: ![spotLight_yellowDiffuse_wideCone](../images/ofLight.spotLight_yellowDiffuse_wideCone.png)
+   31  
+   32  *Spotlight with yellow diffuse reflection, wide cone*
+   ..
+   40  **Diffuse color** : the color of the material when it is illuminated
+   41  
+   42: ![pointLight_blueSpecular_redDiffuse](../images/ofLight.pointLight_blueSpecular_redDiffuse.png)
+   43  
+   44  *Point light with blue specular reflection and red diffuse reflection*
+   ..
+   46  **Ambient color** : the color of the material when it is not illuminated
+   47  
+   48: ![spotLight_redDiffuse_noSpec_blueAmbient](../images/ofLight.spotLight_redDiffuse_noSpec_blueAmbient.png)
+   49  
+   50  *Spotlight with red diffuse reflection, no specular reflection, and blue ambient color*
+   ..
+   52  **Emissive color** : the color the material illuminated from within
+   53  
+   54: ![emissive_green](../images/ofLight.emissive_green.png)
+   55  
+   56  *Emissive green material coloring, no external lights*
+   ..
+   58  **Shininess** : the matte or shiny property of the material, which impacts how much specular light vs diffuse light reflects from a surface.
+   59  
+   60: ![pointLight_yellowDiffuse_blueSpecular_lowShine](../images/ofLight.pointLight_yellowDiffuse_blueSpecular_lowShine.png)
+   61  
+   62  *Point light with yellow diffuse and blue specular reflections, high matte*
+   63  
+   64: ![pointLight_yellowDiffuse_blueSpecular_highShine](../images/ofLight.pointLight_yellowDiffuse_blueSpecular_highShine.png)
+   65  
+   66  *Point light with yellow diffuse and blue specular reflections, high shine*
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/gl/ofVbo.md:
+   17  You may be thinking: Ill just make eight vertices and voila: a cube. Not so quick. Theres a hitch and that hitch is that the OpenGL renderer has different ways of connecting the vertices that you pass to it and none are as efficient as to only need eight vertices to create a cube. You've probably seen a version of the following image somewhere before.
+   18  
+   19: ![gl vertices](../images/ofVbo.gl_vertices_options.png)
+   20  
+   21  Generally, you have to create your points to fit the drawing mode that you've selected because of whats called winding. A vertex gets connected to another vertex in the order that the mode does its winding and this means that you might need multiple vertices in a given location to create the shape you want. The cube, for example, requires eighteen vertices, not the eight that you would expect. If you note the order of vertices in the GL chart above you'll see that all of them use their vertices slightly differently (in particular you should make note of the GL_TRIANGLE_STRIP example). Drawing a shape requires that you keep track of which drawing mode is being used and which order your vertices are declared in. If you're thinking it would be nice if there were an abstraction layer for this, you're thinking right. Enter the mesh, which is really just an abstraction of the vertex and drawing mode that we started with but which has the added bonus of managing the draw order for you. That may seem insignificant at first, but it provides some real benefits when working with complex geometry.
+   ..
+   95  ```
+   96  
+   97: ![vbo result](../images/ofVbo.vbo.png)
+   98  
+   99  You'll notice in a lot of the methods that a usage is required, for instance, setNormals(). The possible options are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY Each of these affects the speed of operations that you perform with the VBO and whether it's certain operations are allowed. For instance, if the vertices are STATIC, then they cannot be changed after they been loaded the first time, whereas if they're DYNAMIC, then they can be modified at any time later. The different modes can be broken down like so:
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/gl/ofVbo.setNormalData.md:
+    1  This sets the normal data for the VBO from a pointer to an array of ofVec3f instances. The normals are calculated as the vector perpendicular to a face. The mathematical definition of a normal is shown on the left, while the way that a normal is calculated for a triangle is shown on the right.
+    2  
+    3: ![vbo normals](../images/ofVbo.setNormalData.vboNormals.png)
+    4  
+    5  One technique for calculating normals is something like the following:
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/graphics/ofPath.arc.md:
+    7  Note that angleEnd needs to be larger than angleBegin, i.e. 0, 180 is ok, while 180,0 is not.
+    8  
+    9: ![](../images/ofPath.arc.example.png)
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/graphics/ofPath.bezierTo.md:
+    6  Creates this:
+    7  
+    8: ![polyline bezier](../images/ofPath.bezierTo.example.png)
+    9  The control points are shown in yellow.
+   10  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/graphics/ofPath.setPolyWindingMode.md:
+    7  OF_POLY_WINDING_ABS_GEQ_TWO
+    8  
+    9: ![ofPath winding modes](../images/ofPath.setPolyWindingMode.example.gif)
+   10  
+   11  So adding the following points:
+   ..
+   72  we can see non zero and positive handle the winding differently:
+   73  
+   74: ![ofPath winding](../images/ofPath.setPolyWindingMode.path_winding.png)
+   75  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/graphics/ofPixels.pasteInto.md:
+    9  ```
+   10  Drawing the three textures here you can see the ball cropped into the mountain:
+   11: ![crop_demo](../images/ofPixels.pasteInto.example.png)
+   12  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/graphics/ofPolyline.arc.md:
+    6  
+    7  
+    8: ![](../images/ofPolyline.arc.example.png)
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/graphics/ofPolyline.getResampledBySpacing.md:
+    5  line.getResampledBySpacing(100).draw();
+    6  ```
+    7: ![polyline resample](../images/ofPolyline.getResampledBySpacing.example.png)
+    8  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/graphics/ofTessellator.md:
+    3  The fairly simple shape shown on the left needs to be broken into triangles to be displayed, an example of how this might be done is shown on the right.
+    4  
+    5: ![tessellation](../images/ofTessellator.example.png)
+    6  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/math/ofVec2f.dot.md:
+    3  *Dot product* (less commonly known as *Euclidean inner product*) expresses the angular relationship between two vectors. In other words it is a measure of how *parallel* two vectors are. If they are completely perpendicular the dot product is 0; if they are completely parallel their dot product is either 1 if they are pointing in the same direction, or -1 if they are pointing in opposite directions.
+    4  
+    5: ![DOT](../images/ofVec2f.dot.dotproduct.png)
+    6  Image courtesy of Wikipedia
+    7  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/math/ofVec2f.getPerpendicular.md:
+    1  Return the **normalized** ofVec2f that is perpendicular to this vector (ie rotated 90 degrees and normalized).
+    2  
+    3: ![PERPENDICULAR](../images/ofVec2f.perpendicular.getPerpendicular.png)
+    4  Image courtesy of Wikipedia
+    5  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/math/ofVec2f.perpendicular.md:
+    1  Set this vector to its own **normalized** perpendicular (by rotating 90 degrees and normalizing).
+    2  
+    3: ![PERPENDICULAR](../images/ofVec2f.perpendicular.perpendicular.png)
+    4  Image courtesy of Wikipedia
+    5  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/math/ofVec3f.dot.md:
+    3  *Dot product* (less commonly known as *Euclidean inner product*) expresses the angular relationship between two vectors. In other words it is a measure of how *parallel* two vectors are. If they are completely perpendicular the dot product is 0; if they are completely parallel their dot product is either 1 if they are pointing in the same direction, or -1 if they are pointing in opposite directions.
+    4  
+    5: ![DOT](../images/ofVec3f.dot.dotproduct.png)
+    6  Image courtesy of Wikipedia
+    7  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/math/ofVec3f.getCrossed.md:
+    1  Returns the cross product (vector product) of this vector and 'vec'. This is a binary operation on two vectors in three-dimensional space, which results in a vector that is perpendicular to both of the vectors being multiplied, and normal to the plane containing them. The name *cross product* is derived from the cross symbol X that is often used to designate this operation; the alternative name *vector product* emphasizes the vector (rather than scalar) nature of the result.
+    2  
+    3: ![CROSS](../images/ofVec3f.getCrossed.crossproduct.png)
+    4  Image courtesy of Wikipedia
+    5  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/types/ofColor.getHueAngle.md:
+    3  always be returned in degrees in the range 0 - 360.
+    4  
+    5: ![hc](../images/ofColor.getHueAngle.example.jpg)
+    6  
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/types/ofColor.md:
+   51  sense of a color in the rainbow) will be:
+   52  
+   53: ![HSB](../images/.ofColor.hsb_example.png)
+   54  
+   55  Approximate hues for some common colors:
+   ..
+   68  versus black is present:
+   69  
+   70: ![SB](../images/ofColor.hsb-cone.jpg)
+   71  
+   72  In other words, saturation refers to the intensity of the color: high
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/types/ofColor.normalize.md:
+   28  will create this:
+   29  
+   30: ![ofNorm](../images/ofColor.normalize.example.png)
+
+/Users/david/Documents/opensource/docsprint/ofdocs_markdown/types/ofColor.setHueAngle.md:
+    4  range between 0 and 360.
+    5  
+    6: ![hc](../images/ofColor.setHueAngle.example.jpg)
+    7  
+
+55 matches across 44 files

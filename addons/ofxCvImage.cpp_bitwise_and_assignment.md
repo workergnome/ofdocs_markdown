@@ -10,4 +10,4 @@ andPuppy.set(255, 0, 0); // make the AND image red
 andPuppy &= cvPuppy; // will & all the bits 
 ```
 
-![Using the &= operation](../images/ofxCvImage.cpp_bitwise_and_assignment.example.png )
+![Using the &= operation](ofxCvImage.cpp_bitwise_and_assignment.example.png )

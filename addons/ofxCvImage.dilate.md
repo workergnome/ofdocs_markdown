@@ -1,1 +1,1 @@
-![Dilating an image, original on Left](../images/ofxCvImage.dilate.example.png)
+![Dilating an image, original on Left](ofxCvImage.dilate.example.png)

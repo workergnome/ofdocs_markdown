@@ -1,6 +1,6 @@
 Set this vector to its own **normalized** perpendicular (by rotating 90 degrees and normalizing).
 
-![PERPENDICULAR](../images/ofVec2f.perpendicular.perpendicular.png)
+![PERPENDICULAR](ofVec2f.perpendicular.perpendicular.png)
 Image courtesy of Wikipedia
 
 ```cpp

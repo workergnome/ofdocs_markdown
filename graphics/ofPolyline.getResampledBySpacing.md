@@ -4,4 +4,4 @@ line.draw();
 ofTranslate(400, 0);
 line.getResampledBySpacing(100).draw();
 ```
-![polyline resample](../images/ofPolyline.getResampledBySpacing.example.png)
+![polyline resample](ofPolyline.getResampledBySpacing.example.png)

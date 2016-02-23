@@ -17,4 +17,4 @@ image.warpIntoMe(parent, src, dst);
 
 ```
 
-![Four corners for warping](../images/ofxCvImage.warpIntoMe.example.png)
+![Four corners for warping](ofxCvImage.warpIntoMe.example.png)

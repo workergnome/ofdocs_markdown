@@ -8,8 +8,8 @@ ofLight is an openGL light for 3D rendering.  It contains four main lighting typ
 
 **Ambient light** : Light from a fixed intensity and fixed source that affects all objects equally
 
-![PointSpot](../images/ofLight.Lights_PointSpot.jpg)
-![AmbientDirectional](../images/ofLight.Lights_AmbientDirectional.jpg)
+![PointSpot](ofLight.Lights_PointSpot.jpg)
+![AmbientDirectional](ofLight.Lights_AmbientDirectional.jpg)
 
 Within ofLight, the following properties of each light type can be set individually:
 
@@ -23,11 +23,11 @@ Light attenuation / falloff
 
 Additionally, spot lights have variable control of cone length and diameter.
 
-![spotLight_yellowDiffuse_narrowCone](../images/ofLight.spotLight_yellowDiffuse_narrowCone.png)
+![spotLight_yellowDiffuse_narrowCone](ofLight.spotLight_yellowDiffuse_narrowCone.png)
 
 *Spotlight with yellow diffuse reflection, narrow cone*
 
-![spotLight_yellowDiffuse_wideCone](../images/ofLight.spotLight_yellowDiffuse_wideCone.png)
+![spotLight_yellowDiffuse_wideCone](ofLight.spotLight_yellowDiffuse_wideCone.png)
 
 *Spotlight with yellow diffuse reflection, wide cone*
 
@@ -39,29 +39,29 @@ GL lighting effects are dependent on both the light and the material being lit. 
 
 **Diffuse color** : the color of the material when it is illuminated
 
-![pointLight_blueSpecular_redDiffuse](../images/ofLight.pointLight_blueSpecular_redDiffuse.png)
+![pointLight_blueSpecular_redDiffuse](ofLight.pointLight_blueSpecular_redDiffuse.png)
 
 *Point light with blue specular reflection and red diffuse reflection*
 
 **Ambient color** : the color of the material when it is not illuminated
 
-![spotLight_redDiffuse_noSpec_blueAmbient](../images/ofLight.spotLight_redDiffuse_noSpec_blueAmbient.png)
+![spotLight_redDiffuse_noSpec_blueAmbient](ofLight.spotLight_redDiffuse_noSpec_blueAmbient.png)
 
 *Spotlight with red diffuse reflection, no specular reflection, and blue ambient color*
 
 **Emissive color** : the color the material illuminated from within
 
-![emissive_green](../images/ofLight.emissive_green.png)
+![emissive_green](ofLight.emissive_green.png)
 
 *Emissive green material coloring, no external lights*
 
 **Shininess** : the matte or shiny property of the material, which impacts how much specular light vs diffuse light reflects from a surface.
 
-![pointLight_yellowDiffuse_blueSpecular_lowShine](../images/ofLight.pointLight_yellowDiffuse_blueSpecular_lowShine.png)
+![pointLight_yellowDiffuse_blueSpecular_lowShine](ofLight.pointLight_yellowDiffuse_blueSpecular_lowShine.png)
 
 *Point light with yellow diffuse and blue specular reflections, high matte*
 
-![pointLight_yellowDiffuse_blueSpecular_highShine](../images/ofLight.pointLight_yellowDiffuse_blueSpecular_highShine.png)
+![pointLight_yellowDiffuse_blueSpecular_highShine](ofLight.pointLight_yellowDiffuse_blueSpecular_highShine.png)
 
 *Point light with yellow diffuse and blue specular reflections, high shine*
 

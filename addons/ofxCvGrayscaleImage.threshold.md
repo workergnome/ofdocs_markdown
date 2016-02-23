@@ -4,4 +4,4 @@ Increases the contrast of the image. The value is the threshold level applied to
 altered.threshold(30); // super high contrast
 ```
 
-![Thresholding an image](../images/ofxCvGrayscaleImage.threshold.example.png)
+![Thresholding an image](ofxCvGrayscaleImage.threshold.example.png)

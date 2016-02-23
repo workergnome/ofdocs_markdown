@@ -6,4 +6,4 @@ path.arc( 100, 100, 50, 50, 0, 360);
 
 Note that angleEnd needs to be larger than angleBegin, i.e. 0, 180 is ok, while 180,0 is not.
 
-![](../images/ofPath.arc.example.png)
+![](ofPath.arc.example.png)

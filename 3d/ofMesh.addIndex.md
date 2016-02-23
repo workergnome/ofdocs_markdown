@@ -15,4 +15,4 @@ Add an index to the index vector. Each index represents the order of connection 
 ```
 
 Will give you this shape:
-![image of basic use of indices](../images/ofMesh.addIndex.index.jpg)
+![image of basic use of indices](ofMesh.addIndex.index.jpg)

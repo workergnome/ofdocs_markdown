@@ -3,4 +3,4 @@ The hue field in setHsb() and in setHue() represents hue as a range between 0 an
 setHueAngle() sets hue using the conventional way to represent hue: with the 
 range between 0 and 360.
 
-![hc](../images/ofColor.setHueAngle.example.jpg)
+![hc](ofColor.setHueAngle.example.jpg)

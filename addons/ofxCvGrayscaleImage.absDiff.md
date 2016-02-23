@@ -6,4 +6,4 @@ current.absDiff(incoming);
 
 The below image shows how the diff process operates:
 
-![Diffing two images](../images/ofxCvGrayscaleImage.absDiff.example.png)
+![Diffing two images](ofxCvGrayscaleImage.absDiff.example.png)

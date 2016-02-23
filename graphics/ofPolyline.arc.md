@@ -5,4 +5,4 @@ The ``clockwise`` boolean sets the drawing direction.  Passing 'false' to it wil
 Optionally, you can specify ``circleResolution``, which is the number of line segments a circle would be drawn with.
 
 
-![](../images/ofPolyline.arc.example.png)
+![](ofPolyline.arc.example.png)

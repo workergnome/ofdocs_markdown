@@ -50,7 +50,7 @@ ofColor. It uses a *hue* value (for the standard ofColor the range for this
 value is between 0 and 255) to determine what the hue (the 'color' in the
 sense of a color in the rainbow) will be:
 
-![HSB](../images/.ofColor.hsb_example.png)
+![HSB](.ofColor.hsb_example.png)
 
 Approximate hues for some common colors:
 
@@ -67,7 +67,7 @@ values to further refine the color. The saturation determines how much of
 the hue versus white is present and brightness determines how much hue
 versus black is present:
 
-![SB](../images/ofColor.hsb-cone.jpg)
+![SB](ofColor.hsb-cone.jpg)
 
 In other words, saturation refers to the intensity of the color: high
 saturation means intense color, low saturation means washed out or black and
