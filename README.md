@@ -1,8 +1,7 @@
 # ofdocs_markdown
 This contains markdown files for each function to be used in the new openFrameworks documentation system.
 
-
-
+This is an experimental work in progress, and is not currently the Approved OpenFrameworks way to do things.
 
 ## Questions:
 
@@ -13,7 +12,7 @@ This contains markdown files for each function to be used in the new openFramewo
 * How do we document constructors?
     - `ofColor.ofColor.md`
 * How do we document destructors?
-    - Currently, we're doing `ofColor.~ofColor.md`, but that's not a good idea.
+    - **TBD**. Currently, we're doing `ofColor.~ofColor.md`, but that's not a good idea.
 * How do we handle #DEFINES?
     - We should never have a markdown for a #DEFINE.
 * How do we handle enums?
@@ -26,7 +25,7 @@ This contains markdown files for each function to be used in the new openFramewo
 * How do we handle operator overloading?
     - See the lookup list below.
 * How do we want to handle internal linking?
-    - This is a problem for Jonas to answer
+    - **TBD**. This is a problem for Jonas to answer
     - preference is magic, doxygen-style linking.
 * How do we handle images?
     - There is a single directory of images, called, logically enough, `images`. 
@@ -40,13 +39,11 @@ This contains markdown files for each function to be used in the new openFramewo
         ofLog() << "this works!";
     ```
 * What is the role of the "README.md" files?
-    - How do they related to the doxygen sections?
+    - **TBD**.  How do they related to the doxygen sections?
     - do README.md files contain grouping-level descriptions?
     - should we have a meta-category for groupings?
 * Can we actually get away with folder-independence?
-
-
-
+    - **TBD**. 
 
 
 ## Lookup List for operators
