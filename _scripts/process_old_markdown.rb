@@ -2,10 +2,9 @@ require 'fileutils'
 
 # Constants that drive what is processed
 OF_DOC_DIRECTORY = '/Users/david/Documents/opensource/docsprint/ofSite/documentation'
-OF_MARKDOWN_FILE = 'utils/ofFileUtils_functions.markdown'
-TARGET_DIRECTORY = './utils'
-CLASS_NAME = ''
-
+OF_MARKDOWN_FILE = 'types//ofColor_.markdown'
+TARGET_DIRECTORY = './types'
+CLASS_NAME = 'ofColor'
 LOOKUP_TABLE = [
   ["<<",  "cpp_left_shift"],
   [">>",  "cpp_right_shift"],
@@ -78,7 +77,7 @@ end
 # function to write a file to disk
 def write_file(file_name)
   path = "#{TARGET_DIRECTORY}/#{file_name}#{FILE_EXTENSION}"
-  unless File.exists? path
+  unless false# File.exists? path
     
     # clean up front
     found_content = false

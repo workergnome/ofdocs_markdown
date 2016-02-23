@@ -1,4 +1,4 @@
-Change the current hue, leaving saturation and brightness intact.
+Change the current hue, leaving saturation and brightness the same.
 
 ```cpp
 ofColor c = ofColor::fromHsb( 0, 255, 255 ); // bright red

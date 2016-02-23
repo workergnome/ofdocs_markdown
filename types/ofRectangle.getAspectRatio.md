@@ -1,6 +1,5 @@
-Returns the ratio of width to height of the ofRectangle as a float.
-
 Example:
+
 ```cpp
 
 // Create a rectangle that is 100 units wide and 200 units tall

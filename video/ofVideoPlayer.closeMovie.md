@@ -1,5 +1,3 @@
-Closes the movie file and de-allocates resources.
-
 Example:
 
 ```cpp

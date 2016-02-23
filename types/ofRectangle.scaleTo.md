@@ -1,35 +1,25 @@
-Adjusts the ofRectangle to match the passed-in ofRectangle using the passed-in ofScaleMode.
+Adjusts the ofRectangle to match the passed-in ofRectangle.  It will use the ofAspectRatioMode to scale the ofRectangle, and will use the use the alignment anchor parameters to position the rectangle.
 
 Assuming the ofRectangle as the Subject and the passed-in ofRectangle as the Target:
 
-__OF_SCALEMODE_FIT__:
-This centers the Subject rectangle within the Target rectangle, and resizes the Subject rectangle to completely fit within the Target Rectangle.
+__ofAspectRatioMode Options:__
 
-  * It fits the Subject rectangle inside the target rectangle.
-  * It preserves Subject's aspect ratio.
-  * The Subject's final area <= the Target's area.
-  * The Subject's center == the Target's center.
+__OF_ASPECT_RATIO_IGNORE__            : Sets the Subject rectangle's width and height to match those of the Target.
+__OF_ASPECT_RATIO_KEEP__              : Resizes the Subject rectangle to completely fit within the Target rectangle.
+__OF_ASPECT_RATIO_KEEP_BY_EXPANDING__ : Resizes the Subject rectangle to completely enclose the Target rectangle.
 
-__OF_SCALEMODE_FILL__:
-This centers the Subject rectangle within the Target rectangle, and resizes the Subject rectangle to completely encompass the Target Rectangle.
+__ofAlignHorz Options:__
 
-  * It fills the Target rectangle with the Subject rectangle.
-  * It preserves the Subject's aspect ratio.
-  * The Subject's Area >= the Target's area.
-  * The Subject's center == the Target's center.
+__OF_ALIGN_HORZ_IGNORE__              : Does not perform any horizontal alignment.
+__OF_ALIGN_HORZ_LEFT__                : Uses the left edge of the rectangle to horizontally anchor the alignment.
+__OF_ALIGN_HORZ_RIGHT__               : Uses the right edge of the rectangle to horizontally anchor the alignment.
+__OF_ALIGN_HORZ_CENTER__              : Uses the center of the rectangle to horizontally anchor the alignment.
 
-__OF_SCALEMODE_CENTER__:
-This centers the Subject rectangle within the Target rectangle, and does not modify the Subject's scale.
+__ofAlignVert Options:__
 
-  * It preserves the Subject's aspect ratio.
-  * The Subject's area is unchanged.
-  * The Subject's center == Target's center.
+__OF_ALIGN_VERT_IGNORE__              : Does not perform any vertical alignment.
+__OF_ALIGN_VERT_TOP__                 : Uses the upper edge of the rectangle to vertically anchor the alignment.
+__OF_ALIGN_VERT_BOTTOM__              : Uses the bottom edge of the rectangle to vertically anchor the alignment.
+__OF_ALIGN_VERT_CENTER__              : Uses the center of the rectangle to vertically anchor the alignment.
 
-__OF_SCALEMODE_STRETCH_TO_FILL__:
-This simply modifies the Subject rectangle to match the Target rectangle's dimensions.
-
-  * It can change the Subject's aspect ratio.
-  * The Subject's area == the Target's area.
-  * The Subject's center == the Target's center.
-
-For a working example of the various ofScaleModes, see the *graphics/rectangleAlignmentAndScaling/* example within the examples directory.
+For a working example of how to use ofAspectRatioMode, ofAlignVert, and ofAlignHorz, see the *graphics/rectangleAlignmentAndScaling/* example within the examples directory.

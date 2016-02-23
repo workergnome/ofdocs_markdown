@@ -1,6 +1,3 @@
-Returns the area of the ofRectangle as a float.
-This is the product of the width and height.
-
 Example:
 ```cpp
 

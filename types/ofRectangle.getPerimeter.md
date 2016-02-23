@@ -1,6 +1,3 @@
-Returns the perimeter of the ofRectangle as a float.
-This is the sum of the lengths of the sides.
-
 Example:
 ```cpp
 
