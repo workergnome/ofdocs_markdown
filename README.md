@@ -44,7 +44,7 @@ This is an experimental work in progress, and is not currently the Approved Open
     - should we have a meta-category for groupings?
 * Can we actually get away with folder-independence?
     - **TBD**. 
-
+* Can we build in internationalization support for the documentation with this?
 
 ## Lookup List for operators
 
