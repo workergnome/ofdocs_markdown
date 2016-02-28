@@ -1,0 +1,14 @@
+ofBase*
+ofApp*
+
+ofFmodSoundPlayer
+ofOpenALSoundPlayer
+ofRtAudioSoundStream
+
+ofGstVideoPlayer
+ofAVFoundationPlayer
+ofQTKitGrabber
+ofDirectShowPlayer
+ofDirectShowGrabber
+ofGstUtils
+ofGstVideoGrabber
