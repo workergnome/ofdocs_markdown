@@ -12,3 +12,11 @@ ofDirectShowPlayer
 ofDirectShowGrabber
 ofGstUtils
 ofGstVideoGrabber
+
+
+ofGLProgrammableRenderer
+ofGLRenderer
+
+ofRendererCollection
+
+ofCairoRenderer
